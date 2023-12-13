@@ -1,7 +1,5 @@
-
 import './App.css';
 import { Home } from './screens/Home';
-import { Ressources } from './screens/Ressources';
 import { Contact } from './screens/Contact';
 import { Routes, Route, NavLink } from 'react-router-dom';
 
@@ -14,9 +12,6 @@ function App() {
           <NavLink className='text-blue-500 hover:underline' style={({isActive}) => ({fontWeight: isActive ? 'bold' : 'normal'})} to='/'>
             Accueil
           </NavLink>
-          <NavLink className='text-blue-500 hover:underline' style={({isActive}) => ({fontWeight: isActive ? 'bold' : 'normal'})} to='/ressources'>
-            Ressources
-          </NavLink>
           <NavLink className='text-blue-500 hover:underline' style={({isActive}) => ({fontWeight: isActive ? 'bold' : 'normal'})} to='/contact'>
             Contact
           </NavLink>
@@ -25,7 +20,6 @@ function App() {
       <main className='flex-grow flex items-center justify-center'>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/ressources' element={<Ressources />} />
           <Route path='/contact' element={<Contact />} />
         </Routes>
       </main>
